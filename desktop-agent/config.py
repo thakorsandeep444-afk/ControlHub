@@ -1,3 +1,3 @@
-SERVER_URL = "http://localhost:5000"
+SERVER_URL = "https://controlhub-eydv.onrender.com/"
 
 DEVICE_NAME = "Gaming PC"
