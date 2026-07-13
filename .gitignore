@@ -1,0 +1,18 @@
+# Server
+server/node_modules/
+server/.env
+
+# Dashboard
+dashboard/node_modules/
+dashboard/dist/
+
+# Desktop Agent
+desktop-agent/venv/
+desktop-agent/__pycache__/
+desktop-agent/*.pyc
+desktop-agent/device.id
+desktop-agent/device.token
+
+# General
+node_modules/
+.env
