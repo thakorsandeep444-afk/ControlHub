@@ -1,0 +1,24 @@
+<service>
+
+  <id>ControlHubAgent</id>
+
+  <name>ControlHub Agent</name>
+
+  <description>ControlHub Remote Monitoring Agent</description>
+
+  <executable>%BASE%\agent.exe</executable>
+
+  <workingdirectory>%BASE%</workingdirectory>
+
+  <startmode>Automatic</startmode>
+
+  <stoptimeout>15 sec</stoptimeout>
+
+  <onfailure action="restart" delay="10 sec"/>
+
+  <log mode="roll-by-size">
+      <sizeThreshold>10240</sizeThreshold>
+      <keepFiles>5</keepFiles>
+  </log>
+
+</service>

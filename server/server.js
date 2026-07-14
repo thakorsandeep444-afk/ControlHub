@@ -118,11 +118,15 @@ io.on("connection", (socket) => {
     // Lock Command
     socket.on("lock", (deviceId) => {
 
+        console.log("LOCK REQUEST FROM DASHBOARD:", deviceId);
+
         const device = connectedDevices.get(deviceId);
 
-        if (!device) return;
+        if (!device) {
+            console.log("DEVICE NOT FOUND");
+            return;
+        }
 
-        // Save command history
         commandHistory.push({
             deviceId: device.deviceId,
             deviceName: device.name,
@@ -130,7 +134,7 @@ io.on("connection", (socket) => {
             time: new Date()
         });
 
-        console.log(`[COMMAND] Lock -> ${device.name}`);
+        console.log("Sending LOCK to:", device.name);
 
         io.to(device.socketId).emit("lock");
 

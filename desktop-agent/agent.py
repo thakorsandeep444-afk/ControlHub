@@ -65,7 +65,7 @@ def restart():
 
 @sio.on("lock")
 def lock():
-    print("Lock command received")
+    print("LOCK EVENT RECEIVED")
     commands.lock()
 
 @sio.on("request-screenshot")
